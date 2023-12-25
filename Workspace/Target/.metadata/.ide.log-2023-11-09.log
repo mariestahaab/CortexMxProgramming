@@ -1,0 +1,15 @@
+2023-11-09 23:26:11,736 [INFO] MainUpdater:2868 - connection check result : 10
+2023-11-09 23:26:12,107 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2023-11-09 23:26:12,111 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2023-11-09 23:26:12,113 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2023-11-09 23:26:12,749 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2023-11-09 23:26:12,751 [INFO] DetailPanel:341 - Set advertising image to /Users/mariestahaab/STM32Cube/Repository//en.prom-stm32h5-mcu-finder.jpg
+2023-11-09 23:26:19,814 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2023-11-09 23:26:19,935 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2023-11-09 23:26:19,936 [INFO] DetailPanel:341 - Set advertising image to /Users/mariestahaab/STM32Cube/Repository//en.prom-stm32h5-mcu-finder.jpg
+2023-11-09 23:26:33,253 [INFO] ApiDb:581 - Connected to CubeFinder SQLite database (/Users/mariestahaab/.stmcufinder/plugins/mcufinder/mcu/cube-finder-db.db)
+2023-11-09 23:27:11,840 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2023-11-09 23:27:11,849 [INFO] ApiDb:448 - Save user favorites file /Users/mariestahaab/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2023-11-09 23:27:11,849 [INFO] ApiDb:452 - User favorites MCUs=[]
+2023-11-09 23:27:11,978 [INFO] ApiDb:448 - Save user favorites file /Users/mariestahaab/.stm32cubeide/favorites.boards.txt: 1 item(s)
+2023-11-09 23:27:11,978 [INFO] ApiDb:452 - User favorites Boards=[STM32F407G-DISC1]

@@ -1,0 +1,10 @@
+12:21:32 **** Incremental Build of configuration Debug for project stackExercise ****
+make -j9 all 
+arm-none-eabi-size   stackExercise.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4968	    100	   1900	   6968	   1b38	stackExercise.elf
+Finished building: default.size.stdout
+ 
+
+12:21:32 Build Finished. 0 errors, 0 warnings. (took 134ms)
+

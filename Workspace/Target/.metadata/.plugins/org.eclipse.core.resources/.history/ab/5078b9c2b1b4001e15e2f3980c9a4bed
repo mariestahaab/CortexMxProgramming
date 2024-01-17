@@ -1,0 +1,31 @@
+/*
+ * Implementation_UniOfLeeds.c
+ *
+ *  Created on: Jan 7, 2024
+ *      Author: mariestahaab
+ */
+
+#include <stdint.h>
+#include <stdio.h>
+
+void Task1_Handler(void){
+
+}
+
+void Task2_Handler(void){
+
+}
+
+void Task3_Handler(void){
+
+}
+
+void Task4_Handler(void){
+
+}
+
+
+int main(void){
+
+	while(1);
+}

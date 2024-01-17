@@ -1,0 +1,35 @@
+/*
+ * Implementation_UniOfLeeds.c
+ *
+ *  Created on: Jan 7, 2024
+ *      Author: mariestahaab
+ */
+
+#include <stdint.h>
+#include <stdio.h>
+
+typedef void (*TaskFunction_t) (void);
+
+void Task1_Handler(void){
+
+}	TaskFunction_t Task_1;
+
+void Task2_Handler(void){
+
+}	TaskFunction_t Task_2;
+
+void Task3_Handler(void){
+
+}	TaskFunction_t Task_3;
+
+void Task4_Handler(void){
+
+}	TaskFunction_t Task_4;
+
+TaskFunction_t functionHolder[4] = {Task_1, Task_2, Task_3, Task_4};
+
+
+int main(void){
+
+	while(1);
+}

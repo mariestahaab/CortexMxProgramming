@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TaskScheduler/Src/main.c&apos; to &apos;Implementation_fastBit.c&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/main.c" name="Implementation_fastBit.c" stamp="1704671133878" updateReferences="true"/>
+</session>

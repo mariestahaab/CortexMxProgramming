@@ -1,2 +1,0 @@
-../Src/pend_int_USART3.c:13:5:main	16	static
-../Src/pend_int_USART3.c:49:6:USART3_IRQHandler	8	static

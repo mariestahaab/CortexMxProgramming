@@ -1,0 +1,7 @@
+../Src/Implementation_fastBit.c:52:5:main	1
+../Src/Implementation_fastBit.c:61:6:sysTick_init	1
+../Src/Implementation_fastBit.c:79:6:SysTick_Handler	1
+../Src/Implementation_fastBit.c:85:6:Task1_Handler	1
+../Src/Implementation_fastBit.c:91:6:Task2_Handler	1
+../Src/Implementation_fastBit.c:97:6:Task3_Handler	1
+../Src/Implementation_fastBit.c:103:6:Task4_Handler	1

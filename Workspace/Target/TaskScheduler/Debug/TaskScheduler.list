@@ -1,5 +1,5 @@
 
-TaskScheduler.elf:     file format elf32-littlearm
+taskScheduler.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -7,19 +7,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         00000c0c  08000188  08000188  00010188  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00000034  08000d94  08000d94  00010d94  2**2
+  2 .rodata       00000014  08000d94  08000d94  00010d94  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08000dc8  08000dc8  0002005c  2**0
+  3 .ARM.extab    00000000  08000da8  08000da8  0002005c  2**0
                   CONTENTS
-  4 .ARM          00000000  08000dc8  08000dc8  0002005c  2**0
+  4 .ARM          00000000  08000da8  08000da8  0002005c  2**0
                   CONTENTS
-  5 .preinit_array 00000000  08000dc8  08000dc8  0002005c  2**0
+  5 .preinit_array 00000000  08000da8  08000da8  0002005c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08000dc8  08000dc8  00010dc8  2**2
+  6 .init_array   00000004  08000da8  08000da8  00010da8  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  08000dcc  08000dcc  00010dcc  2**2
+  7 .fini_array   00000004  08000dac  08000dac  00010dac  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         0000005c  20000000  08000dd0  00020000  2**2
+  8 .data         0000005c  20000000  08000db0  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   9 .ccmram       00000000  10000000  10000000  0002005c  2**0
                   CONTENTS
@@ -31,23 +31,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  13 .comment      00000043  00000000  00000000  00020086  2**0
                   CONTENTS, READONLY
- 14 .debug_info   000009af  00000000  00000000  000200c9  2**0
+ 14 .debug_info   00000a1a  00000000  00000000  000200c9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_abbrev 00000337  00000000  00000000  00020a78  2**0
+ 15 .debug_abbrev 0000038c  00000000  00000000  00020ae3  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_aranges 00000148  00000000  00000000  00020db0  2**3
+ 16 .debug_aranges 00000140  00000000  00000000  00020e70  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_rnglists 000000e2  00000000  00000000  00020ef8  2**0
+ 17 .debug_rnglists 000000d7  00000000  00000000  00020fb0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_macro  00002cd7  00000000  00000000  00020fda  2**0
+ 18 .debug_macro  00002e29  00000000  00000000  00021087  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   000013c7  00000000  00000000  00023cb1  2**0
+ 19 .debug_line   000019b3  00000000  00000000  00023eb0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    000099a5  00000000  00000000  00025078  2**0
+ 20 .debug_str    000099c4  00000000  00000000  00025863  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  00000a84  00000000  00000000  0002ea20  2**2
+ 21 .debug_frame  00000a24  00000000  00000000  0002f228  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000081  00000000  00000000  0002f4a4  2**0
+ 22 .debug_line_str 00000081  00000000  00000000  0002fc4c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -80,102 +80,103 @@ Disassembly of section .text:
  80001c0:	20000060 	.word	0x20000060
  80001c4:	08000d7c 	.word	0x08000d7c
 
-080001c8 <main>:
-#define SYST_CLK				HSI_CLK
-#define TICK_Hz					1000U
-
-
-int main(void)
-{
- 80001c8:	b580      	push	{r7, lr}
- 80001ca:	af00      	add	r7, sp, #0
-    sysTick_init(TICK_Hz);
- 80001cc:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
- 80001d0:	f000 f802 	bl	80001d8 <sysTick_init>
-
-	for(;;);
- 80001d4:	e7fe      	b.n	80001d4 <main+0xc>
-	...
-
-080001d8 <sysTick_init>:
-}
-
-// SysTick Timer Configuration:
-
-void sysTick_init(uint32_t TickHz){
- 80001d8:	b480      	push	{r7}
- 80001da:	b087      	sub	sp, #28
- 80001dc:	af00      	add	r7, sp, #0
- 80001de:	6078      	str	r0, [r7, #4]
-
-	uint32_t *SYST_CSR = (uint32_t *) 0xE000E010;		// SysTick Control and Status Register
- 80001e0:	4b13      	ldr	r3, [pc, #76]	; (8000230 <sysTick_init+0x58>)
- 80001e2:	617b      	str	r3, [r7, #20]
-	uint32_t *SYST_RVR = (uint32_t *) 0xE000E014;		// SysTick Reload Value Register
- 80001e4:	4b13      	ldr	r3, [pc, #76]	; (8000234 <sysTick_init+0x5c>)
- 80001e6:	613b      	str	r3, [r7, #16]
-
-	uint32_t countValue = (SYST_CLK / TickHz) - 1;		// -1: because flag triggered on value reload => 1 extra count
- 80001e8:	4a13      	ldr	r2, [pc, #76]	; (8000238 <sysTick_init+0x60>)
- 80001ea:	687b      	ldr	r3, [r7, #4]
- 80001ec:	fbb2 f3f3 	udiv	r3, r2, r3
- 80001f0:	3b01      	subs	r3, #1
- 80001f2:	60fb      	str	r3, [r7, #12]
-
-	*SYST_RVR &= ~(0x00FFFFFF);							// Clear the Reload Value Register
- 80001f4:	693b      	ldr	r3, [r7, #16]
- 80001f6:	681b      	ldr	r3, [r3, #0]
- 80001f8:	f003 427f 	and.w	r2, r3, #4278190080	; 0xff000000
- 80001fc:	693b      	ldr	r3, [r7, #16]
- 80001fe:	601a      	str	r2, [r3, #0]
-	*SYST_RVR |= countValue;							// Load countValue into the Reload Value Register
- 8000200:	693b      	ldr	r3, [r7, #16]
- 8000202:	681a      	ldr	r2, [r3, #0]
- 8000204:	68fb      	ldr	r3, [r7, #12]
- 8000206:	431a      	orrs	r2, r3
- 8000208:	693b      	ldr	r3, [r7, #16]
- 800020a:	601a      	str	r2, [r3, #0]
-
-	*SYST_CSR |= (1 << 2) | (1 << 1);					// Set CLKSOURCE (bit-2) to 1 => processor clock; and
- 800020c:	697b      	ldr	r3, [r7, #20]
- 800020e:	681b      	ldr	r3, [r3, #0]
- 8000210:	f043 0206 	orr.w	r2, r3, #6
- 8000214:	697b      	ldr	r3, [r7, #20]
- 8000216:	601a      	str	r2, [r3, #0]
-														// set TICKINT (bit-1) to 1 => counting down to zero asserts the SysTick exception request.
-
-	*SYST_CSR |= (1 << 0);								// Set ENABLE (bit-0) to 1 => counter enabled
- 8000218:	697b      	ldr	r3, [r7, #20]
- 800021a:	681b      	ldr	r3, [r3, #0]
- 800021c:	f043 0201 	orr.w	r2, r3, #1
- 8000220:	697b      	ldr	r3, [r7, #20]
- 8000222:	601a      	str	r2, [r3, #0]
-}
- 8000224:	bf00      	nop
- 8000226:	371c      	adds	r7, #28
- 8000228:	46bd      	mov	sp, r7
- 800022a:	bc80      	pop	{r7}
- 800022c:	4770      	bx	lr
- 800022e:	bf00      	nop
- 8000230:	e000e010 	.word	0xe000e010
- 8000234:	e000e014 	.word	0xe000e014
- 8000238:	00f42400 	.word	0x00f42400
-
-0800023c <SysTick_Handler>:
+080001c8 <SysTick_Handler>:
+#include "Scheduler_SysTick.h"
+#include "taskStackConfig.h"
 
 // SysTick Handler Implementation:
 
 void SysTick_Handler(void){
- 800023c:	b580      	push	{r7, lr}
- 800023e:	af00      	add	r7, sp, #0
+ 80001c8:	b580      	push	{r7, lr}
+ 80001ca:	af00      	add	r7, sp, #0
 	printf("SysTick Handler \n");
- 8000240:	4802      	ldr	r0, [pc, #8]	; (800024c <SysTick_Handler+0x10>)
- 8000242:	f000 fa0b 	bl	800065c <puts>
+ 80001cc:	4802      	ldr	r0, [pc, #8]	; (80001d8 <SysTick_Handler+0x10>)
+ 80001ce:	f000 fa45 	bl	800065c <puts>
 }
- 8000246:	bf00      	nop
- 8000248:	bd80      	pop	{r7, pc}
- 800024a:	bf00      	nop
- 800024c:	08000d94 	.word	0x08000d94
+ 80001d2:	bf00      	nop
+ 80001d4:	bd80      	pop	{r7, pc}
+ 80001d6:	bf00      	nop
+ 80001d8:	08000d94 	.word	0x08000d94
+
+080001dc <sysTick_init>:
+
+// SysTick Timer Configuration:
+
+void sysTick_init(uint32_t TickHz){
+ 80001dc:	b480      	push	{r7}
+ 80001de:	b087      	sub	sp, #28
+ 80001e0:	af00      	add	r7, sp, #0
+ 80001e2:	6078      	str	r0, [r7, #4]
+
+	uint32_t *SYST_CSR = (uint32_t *) 0xE000E010;		// SysTick Control and Status Register
+ 80001e4:	4b13      	ldr	r3, [pc, #76]	; (8000234 <sysTick_init+0x58>)
+ 80001e6:	617b      	str	r3, [r7, #20]
+	uint32_t *SYST_RVR = (uint32_t *) 0xE000E014;		// SysTick Reload Value Register
+ 80001e8:	4b13      	ldr	r3, [pc, #76]	; (8000238 <sysTick_init+0x5c>)
+ 80001ea:	613b      	str	r3, [r7, #16]
+
+	uint32_t countValue = (SYST_CLK / TickHz) - 1;		// -1: because flag triggered on value reload => 1 extra count
+ 80001ec:	4a13      	ldr	r2, [pc, #76]	; (800023c <sysTick_init+0x60>)
+ 80001ee:	687b      	ldr	r3, [r7, #4]
+ 80001f0:	fbb2 f3f3 	udiv	r3, r2, r3
+ 80001f4:	3b01      	subs	r3, #1
+ 80001f6:	60fb      	str	r3, [r7, #12]
+
+	*SYST_RVR &= ~(0x00FFFFFF);							// Clear the Reload Value Register
+ 80001f8:	693b      	ldr	r3, [r7, #16]
+ 80001fa:	681b      	ldr	r3, [r3, #0]
+ 80001fc:	f003 427f 	and.w	r2, r3, #4278190080	; 0xff000000
+ 8000200:	693b      	ldr	r3, [r7, #16]
+ 8000202:	601a      	str	r2, [r3, #0]
+	*SYST_RVR |= countValue;							// Load countValue into the Reload Value Register
+ 8000204:	693b      	ldr	r3, [r7, #16]
+ 8000206:	681a      	ldr	r2, [r3, #0]
+ 8000208:	68fb      	ldr	r3, [r7, #12]
+ 800020a:	431a      	orrs	r2, r3
+ 800020c:	693b      	ldr	r3, [r7, #16]
+ 800020e:	601a      	str	r2, [r3, #0]
+
+	*SYST_CSR |= (1 << 2) | (1 << 1);					// Set CLKSOURCE (bit-2) to 1 => processor clock; and
+ 8000210:	697b      	ldr	r3, [r7, #20]
+ 8000212:	681b      	ldr	r3, [r3, #0]
+ 8000214:	f043 0206 	orr.w	r2, r3, #6
+ 8000218:	697b      	ldr	r3, [r7, #20]
+ 800021a:	601a      	str	r2, [r3, #0]
+														// set TICKINT (bit-1) to 1 => counting down to zero asserts the SysTick exception request.
+
+	*SYST_CSR |= (1 << 0);								// Set ENABLE (bit-0) to 1 => counter enabled
+ 800021c:	697b      	ldr	r3, [r7, #20]
+ 800021e:	681b      	ldr	r3, [r3, #0]
+ 8000220:	f043 0201 	orr.w	r2, r3, #1
+ 8000224:	697b      	ldr	r3, [r7, #20]
+ 8000226:	601a      	str	r2, [r3, #0]
+}
+ 8000228:	bf00      	nop
+ 800022a:	371c      	adds	r7, #28
+ 800022c:	46bd      	mov	sp, r7
+ 800022e:	bc80      	pop	{r7}
+ 8000230:	4770      	bx	lr
+ 8000232:	bf00      	nop
+ 8000234:	e000e010 	.word	0xe000e010
+ 8000238:	e000e014 	.word	0xe000e014
+ 800023c:	00f42400 	.word	0x00f42400
+
+08000240 <main>:
+
+#include "Scheduler_SysTick.h"
+#include "taskStackConfig.h"
+
+int main(void)
+{
+ 8000240:	b580      	push	{r7, lr}
+ 8000242:	af00      	add	r7, sp, #0
+    sysTick_init(TICK_Hz);
+ 8000244:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
+ 8000248:	f7ff ffc8 	bl	80001dc <sysTick_init>
+
+	for(;;);
+ 800024c:	e7fe      	b.n	800024c <main+0xc>
+	...
 
 08000250 <ITM_SendChar>:
 /* ITM register addresses */
@@ -561,7 +562,7 @@ LoopFillZerobss:
  800040a:	f000 f93d 	bl	8000688 <__libc_init_array>
 /* Call the application's entry point.*/
   bl main
- 800040e:	f7ff fedb 	bl	80001c8 <main>
+ 800040e:	f7ff ff17 	bl	8000240 <main>
 
 08000412 <LoopForever>:
 
@@ -575,7 +576,7 @@ LoopForever:
   ldr r1, =_edata
  800041c:	2000005c 	.word	0x2000005c
   ldr r2, =_sidata
- 8000420:	08000dd0 	.word	0x08000dd0
+ 8000420:	08000db0 	.word	0x08000db0
   ldr r2, =_sbss
  8000424:	2000005c 	.word	0x2000005c
   ldr r4, =_ebss
@@ -882,10 +883,10 @@ Infinite_Loop:
  80006ba:	4798      	blx	r3
  80006bc:	3601      	adds	r6, #1
  80006be:	e7f2      	b.n	80006a6 <__libc_init_array+0x1e>
- 80006c0:	08000dc8 	.word	0x08000dc8
- 80006c4:	08000dc8 	.word	0x08000dc8
- 80006c8:	08000dc8 	.word	0x08000dc8
- 80006cc:	08000dcc 	.word	0x08000dcc
+ 80006c0:	08000da8 	.word	0x08000da8
+ 80006c4:	08000da8 	.word	0x08000da8
+ 80006c8:	08000da8 	.word	0x08000da8
+ 80006cc:	08000dac 	.word	0x08000dac
 
 080006d0 <__retarget_lock_init_recursive>:
  80006d0:	4770      	bx	lr

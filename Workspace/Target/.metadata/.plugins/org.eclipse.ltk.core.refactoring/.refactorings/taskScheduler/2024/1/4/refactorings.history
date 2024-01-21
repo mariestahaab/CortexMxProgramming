@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;taskScheduler/Src/main.c&apos; to &apos;UniOfLeeds_Implementation.c&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/main.c" name="UniOfLeeds_Implementation.c" stamp="1705797960232" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;taskScheduler/Src/UniOfLeeds_Implementation.c&apos; to &apos;main.c&apos;" description="Rename resource &apos;UniOfLeeds_Implementation.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/UniOfLeeds_Implementation.c" name="main.c" stamp="1705797980590" updateReferences="true"/>
+</session>

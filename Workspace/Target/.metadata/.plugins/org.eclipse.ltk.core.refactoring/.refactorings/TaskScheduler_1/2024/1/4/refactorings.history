@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;TaskScheduler/taskStackConfig/src/handlers.c&apos; to &apos;taskHandlers.c&apos;" description="Rename resource &apos;handlers.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="taskStackConfig/src/handlers.c" name="taskHandlers.c" stamp="1705797256597" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;TaskScheduler/taskStackConfig&apos; to &apos;Scheduler_RoundRobin&apos;" description="Rename resource &apos;taskStackConfig&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="taskStackConfig" name="Scheduler_RoundRobin" stamp="1705797507996" updateReferences="true"/>
+</session>

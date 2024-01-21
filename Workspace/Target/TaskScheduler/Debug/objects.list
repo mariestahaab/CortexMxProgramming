@@ -1,4 +1,7 @@
-"./Src/Implementation_fastBit.o"
+"./Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+"./Scheduler_RoundRobin/Src/TaskHandlers.o"
+"./Scheduler_RoundRobin/Src/TaskStackConfig.o"
+"./Src/FastBitEmbedded_Implementation.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"
 "./Startup/startup_stm32f407vgtx.o"

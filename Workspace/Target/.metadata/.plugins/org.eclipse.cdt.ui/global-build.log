@@ -1,1458 +1,277 @@
-18:45:47 **** Clean-only build of configuration Debug for project 000HelloWorld ****
+00:59:28 **** Clean-only build of configuration Debug for project taskScheduler ****
 make -j9 clean 
 rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
-rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf 000HelloWorld.elf 000HelloWorld.list 000HelloWorld.map default.size.stdout
- 
-18:45:49 **** Build of configuration Debug for project 000HelloWorld ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "000HelloWorld.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/000HelloWorld/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="000HelloWorld.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 000HelloWorld.elf
- 
-arm-none-eabi-size   000HelloWorld.elf 
-arm-none-eabi-objdump -h -S  000HelloWorld.elf  > "000HelloWorld.list"
-   text	   data	    bss	    dec	    hex	filename
-   4904	    100	   1900	   6904	   1af8	000HelloWorld.elf
-Finished building: default.size.stdout
- 
-Finished building: 000HelloWorld.list
- 
-18:46:23 **** Incremental Build of configuration Debug for project 000HelloWorld ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "000HelloWorld.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/000HelloWorld/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="000HelloWorld.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 000HelloWorld.elf
- 
-arm-none-eabi-size   000HelloWorld.elf 
-arm-none-eabi-objdump -h -S  000HelloWorld.elf  > "000HelloWorld.list"
-   text	   data	    bss	    dec	    hex	filename
-   3404	    100	   1900	   5404	   151c	000HelloWorld.elf
-Finished building: default.size.stdout
- 
-Finished building: 000HelloWorld.list
- 
-18:49:42 **** Incremental Build of configuration Debug for project 000HelloWorld ****
-make -j9 all 
-arm-none-eabi-size   000HelloWorld.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3404	    100	   1900	   5404	   151c	000HelloWorld.elf
-Finished building: default.size.stdout
- 
-18:50:21 **** Incremental Build of configuration Debug for project 000HelloWorld ****
-make -j9 all 
-arm-none-eabi-size   000HelloWorld.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3404	    100	   1900	   5404	   151c	000HelloWorld.elf
-Finished building: default.size.stdout
- 
-21:26:20 **** Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "operationModes.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/operationModes/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="operationModes.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: operationModes.elf
- 
-arm-none-eabi-size   operationModes.elf 
-arm-none-eabi-objdump -h -S  operationModes.elf  > "operationModes.list"
-   text	   data	    bss	    dec	    hex	filename
-    676	      8	   1568	   2252	    8cc	operationModes.elf
-Finished building: default.size.stdout
- 
-Finished building: operationModes.list
- 
-21:27:41 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc -o "operationModes.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/operationModes/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="operationModes.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: operationModes.elf
- 
-arm-none-eabi-size   operationModes.elf 
-arm-none-eabi-objdump -h -S  operationModes.elf  > "operationModes.list"
-   text	   data	    bss	    dec	    hex	filename
-    676	      8	   1568	   2252	    8cc	operationModes.elf
-Finished building: default.size.stdout
- 
-Finished building: operationModes.list
- 
-21:28:11 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-size   operationModes.elf 
-   text	   data	    bss	    dec	    hex	filename
-    676	      8	   1568	   2252	    8cc	operationModes.elf
-Finished building: default.size.stdout
- 
-21:29:15 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "operationModes.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/operationModes/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="operationModes.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: operationModes.elf
- 
-arm-none-eabi-size   operationModes.elf 
-arm-none-eabi-objdump -h -S  operationModes.elf  > "operationModes.list"
-   text	   data	    bss	    dec	    hex	filename
-   3396	    100	   1900	   5396	   1514	operationModes.elf
-Finished building: default.size.stdout
- 
-Finished building: operationModes.list
- 
-21:29:19 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-size   operationModes.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3396	    100	   1900	   5396	   1514	operationModes.elf
-Finished building: default.size.stdout
- 
-21:31:27 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "operationModes.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/operationModes/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="operationModes.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: operationModes.elf
- 
-arm-none-eabi-size   operationModes.elf 
-arm-none-eabi-objdump -h -S  operationModes.elf  > "operationModes.list"
-   text	   data	    bss	    dec	    hex	filename
-   3572	    100	   1900	   5572	   15c4	operationModes.elf
-Finished building: default.size.stdout
- 
-Finished building: operationModes.list
- 
-21:32:01 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-size   operationModes.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3572	    100	   1900	   5572	   15c4	operationModes.elf
-Finished building: default.size.stdout
- 
-01:51:00 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-size   operationModes.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3572	    100	   1900	   5572	   15c4	operationModes.elf
-Finished building: default.size.stdout
- 
-15:05:34 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-size   operationModes.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3572	    100	   1900	   5572	   15c4	operationModes.elf
-Finished building: default.size.stdout
- 
-15:05:39 **** Incremental Build of configuration Debug for project operationModes ****
-make -j9 all 
-arm-none-eabi-size   operationModes.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3572	    100	   1900	   5572	   15c4	operationModes.elf
-Finished building: default.size.stdout
- 
-23:27:55 **** Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    676	      8	   1568	   2252	    8cc	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-23:47:43 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-23:48:13 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-23:54:00 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-23:54:13 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-23:54:22 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-23:54:26 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-00:32:53 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-00:34:55 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    720	     16	   1568	   2304	    900	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-00:35:03 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    720	     16	   1568	   2304	    900	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-00:39:08 **** Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    712	     12	   1564	   2288	    8f0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-00:41:14 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    732	     12	   1564	   2308	    904	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-00:41:19 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    732	     12	   1564	   2308	    904	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-00:43:04 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:30:10: error: 'addr' undeclared (first use in this function)
-   30 |         *addr |= (0x4 << 24) | (0x6 << 0);
-      |          ^~~~
-../Src/main.c:30:10: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-00:43:10 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-00:43:32 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-00:43:34 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-00:43:38 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-00:46:07 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-01:06:51 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    764	     16	   1568	   2348	    92c	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-01:07:04 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-01:07:11 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-18:57:35 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:40:9: error: 'val' undeclared (first use in this function)
-   40 |         val = 50;
-      |         ^~~
-../Src/main.c:40:9: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-18:57:44 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-18:58:21 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-19:12:25 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-19:23:36 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-19:23:39 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-19:33:04 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-19:37:41 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-19:37:44 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-19:38:28 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    688	      8	   1568	   2264	    8d8	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-19:38:31 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    688	      8	   1568	   2264	    8d8	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-19:38:34 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    688	      8	   1568	   2264	    8d8	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-19:38:38 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-size   inlineAssembly_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-    688	      8	   1568	   2264	    8d8	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-19:39:03 **** Incremental Build of configuration Debug for project inlineAssembly_1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "inlineAssembly_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/inlineAssembly_1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inlineAssembly_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: inlineAssembly_1.elf
- 
-arm-none-eabi-size   inlineAssembly_1.elf 
-arm-none-eabi-objdump -h -S  inlineAssembly_1.elf  > "inlineAssembly_1.list"
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	inlineAssembly_1.elf
-Finished building: default.size.stdout
- 
-Finished building: inlineAssembly_1.list
- 
-22:45:27 **** Build of configuration Debug for project accessLevels ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "accessLevels.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/accessLevels/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="accessLevels.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: accessLevels.elf
- 
-arm-none-eabi-size   accessLevels.elf 
-arm-none-eabi-objdump -h -S  accessLevels.elf  > "accessLevels.list"
-   text	   data	    bss	    dec	    hex	filename
-   3572	    100	   1900	   5572	   15c4	accessLevels.elf
-Finished building: default.size.stdout
- 
-Finished building: accessLevels.list
- 
-23:30:28 **** Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-Finished building: bitBanding.list
-   text	   data	    bss	    dec	    hex	filename
-    676	      8	   1568	   2252	    8cc	bitBanding.elf
- 
-Finished building: default.size.stdout
- 
-23:31:41 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:30:18: warning: unused variable 'ptr' [-Wunused-variable]
-   30 |         uint8_t *ptr = (uint8_t*) BIT_BAND_MEM_ADDR;
-      |                  ^~~
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	bitBanding.elf
-Finished building: default.size.stdout
- 
-Finished building: bitBanding.list
- 
-23:32:57 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	bitBanding.elf
-Finished building: default.size.stdout
- 
-Finished building: bitBanding.list
- 
-23:33:36 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-   text	   data	    bss	    dec	    hex	filename
-    696	      8	   1568	   2272	    8e0	bitBanding.elf
-Finished building: default.size.stdout
- 
-Finished building: bitBanding.list
- 
-23:36:23 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-   text	   data	    bss	    dec	    hex	filename
-    704	      8	   1568	   2280	    8e8	bitBanding.elf
-Finished building: default.size.stdout
- 
-Finished building: bitBanding.list
- 
-23:36:26 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-size   bitBanding.elf 
-   text	   data	    bss	    dec	    hex	filename
-    704	      8	   1568	   2280	    8e8	bitBanding.elf
-Finished building: default.size.stdout
- 
-23:38:59 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:43:18: warning: variable 'aliasAddr' set but not used [-Wunused-but-set-variable]
-   43 |         uint8_t *aliasAddr = (uint8_t*) ALIAS_ADDR;
-      |                  ^~~~~~~~~
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-   text	   data	    bss	    dec	    hex	filename
-    724	      8	   1568	   2300	    8fc	bitBanding.elf
-Finished building: default.size.stdout
- 
-Finished building: bitBanding.list
- 
-23:39:32 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-   text	   data	    bss	    dec	    hex	filename
-    724	      8	   1568	   2300	    8fc	bitBanding.elf
-Finished building: default.size.stdout
- 
-Finished building: bitBanding.list
- 
-23:39:35 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-size   bitBanding.elf 
-   text	   data	    bss	    dec	    hex	filename
-    724	      8	   1568	   2300	    8fc	bitBanding.elf
-Finished building: default.size.stdout
- 
-12:08:44 **** Build of configuration Debug for project stackExercise ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "stackExercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/stackExercise/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stackExercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stackExercise.elf
- 
-arm-none-eabi-size   stackExercise.elf 
-arm-none-eabi-objdump -h -S  stackExercise.elf  > "stackExercise.list"
-   text	   data	    bss	    dec	    hex	filename
-   4968	    100	   1900	   6968	   1b38	stackExercise.elf
-Finished building: stackExercise.list
- 
-Finished building: default.size.stdout
- 
-12:09:14 **** Incremental Build of configuration Debug for project stackExercise ****
-make -j9 all 
-arm-none-eabi-size   stackExercise.elf 
-   text	   data	    bss	    dec	    hex	filename
-   4968	    100	   1900	   6968	   1b38	stackExercise.elf
-Finished building: default.size.stdout
- 
-12:21:03 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-   text	   data	    bss	    dec	    hex	filename
-    724	      8	   1568	   2300	    8fc	bitBanding.elf
-Finished building: default.size.stdout
- 
-Finished building: bitBanding.list
- 
-12:21:04 **** Incremental Build of configuration Debug for project stackExercise ****
-make -j9 all 
-arm-none-eabi-size   stackExercise.elf 
-   text	   data	    bss	    dec	    hex	filename
-   4968	    100	   1900	   6968	   1b38	stackExercise.elf
-Finished building: default.size.stdout
- 
-12:21:19 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:26:89: error: expected ',' or ';' before 'U'
-   26 | #define ALIAS_ADDR (ALIAS_BASE + (32 * (BIT_BAND_MEM_ADDR - BIT_BAND_BASE)) + (BIT * 4))U;
-      |                                                                                         ^
-../Src/main.c:43:41: note: in expansion of macro 'ALIAS_ADDR'
-   43 |         uint8_t *aliasAddr = (uint8_t*) ALIAS_ADDR;
-      |                                         ^~~~~~~~~~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-12:21:20 **** Incremental Build of configuration Debug for project stackExercise ****
-make -j9 all 
-arm-none-eabi-size   stackExercise.elf 
-   text	   data	    bss	    dec	    hex	filename
-   4968	    100	   1900	   6968	   1b38	stackExercise.elf
-Finished building: default.size.stdout
- 
-12:21:26 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:26:90: error: expected ',' or ';' before 'U'
-   26 | #define ALIAS_ADDR (ALIAS_BASE + (32 * (BIT_BAND_MEM_ADDR - BIT_BAND_BASE)) + (BIT * 4)) U;
-      |                                                                                          ^
-../Src/main.c:43:41: note: in expansion of macro 'ALIAS_ADDR'
-   43 |         uint8_t *aliasAddr = (uint8_t*) ALIAS_ADDR;
-      |                                         ^~~~~~~~~~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-12:21:26 **** Incremental Build of configuration Debug for project stackExercise ****
-make -j9 all 
-arm-none-eabi-size   stackExercise.elf 
-   text	   data	    bss	    dec	    hex	filename
-   4968	    100	   1900	   6968	   1b38	stackExercise.elf
-Finished building: default.size.stdout
- 
-12:21:31 **** Incremental Build of configuration Debug for project bitBanding ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "bitBanding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/bitBanding/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bitBanding.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bitBanding.elf
- 
-arm-none-eabi-size   bitBanding.elf 
-arm-none-eabi-objdump -h -S  bitBanding.elf  > "bitBanding.list"
-   text	   data	    bss	    dec	    hex	filename
-    724	      8	   1568	   2300	    8fc	bitBanding.elf
-Finished building: default.size.stdout
- 
-Finished building: bitBanding.list
- 
-12:21:32 **** Incremental Build of configuration Debug for project stackExercise ****
-make -j9 all 
-arm-none-eabi-size   stackExercise.elf 
-   text	   data	    bss	    dec	    hex	filename
-   4968	    100	   1900	   6968	   1b38	stackExercise.elf
-Finished building: default.size.stdout
- 
-18:32:25 **** Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/pend_int_USART3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pend_int_USART3.d" -MT"Src/pend_int_USART3.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/pend_int_USART3.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-Finished building: interrupts.list
- 
-   text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	interrupts.elf
-Finished building: default.size.stdout
- 
-19:16:50 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/pend_int_USART3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pend_int_USART3.d" -MT"Src/pend_int_USART3.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/pend_int_USART3.o"
-../Src/pend_int_USART3.c: In function 'main':
-../Src/pend_int_USART3.c:26:19: warning: unused variable 'pISPR_1' [-Wunused-variable]
-   26 |         uint32_t *pISPR_1 = (uint32_t *) 0xE000E200 + 0x4;
-      |                   ^~~~~~~
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-    652	      8	   1568	   2228	    8b4	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-19:20:20 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/pend_int_USART3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pend_int_USART3.d" -MT"Src/pend_int_USART3.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/pend_int_USART3.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-19:22:56 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/pend_int_USART3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pend_int_USART3.d" -MT"Src/pend_int_USART3.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/pend_int_USART3.o"
-../Src/pend_int_USART3.c: In function 'USART3_IRQHandler':
-../Src/pend_int_USART3.c:49:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-   49 |         printf("In USART 3 IRQ \n");
-      |         ^~~~~~
-../Src/pend_int_USART3.c:11:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-   10 | #include <stdint.h>
-  +++ |+#include <stdio.h>
-   11 | 
-../Src/pend_int_USART3.c:49:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-   49 |         printf("In USART 3 IRQ \n");
-      |         ^~~~~~
-../Src/pend_int_USART3.c:49:9: note: include '<stdio.h>' or provide a declaration of 'printf'
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3348	    100	   1900	   5348	   14e4	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-19:23:14 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/pend_int_USART3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pend_int_USART3.d" -MT"Src/pend_int_USART3.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/pend_int_USART3.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3348	    100	   1900	   5348	   14e4	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-19:23:24 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3348	    100	   1900	   5348	   14e4	interrupts.elf
-Finished building: default.size.stdout
- 
-19:25:44 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-19:26:56 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-19:29:35 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/pend_int_USART3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pend_int_USART3.d" -MT"Src/pend_int_USART3.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/pend_int_USART3.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-19:29:39 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-19:30:13 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/pend_int_USART3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pend_int_USART3.d" -MT"Src/pend_int_USART3.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/pend_int_USART3.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-19:30:18 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-19:32:34 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-19:32:48 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-19:32:59 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-19:33:08 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-19:38:50 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3424	    100	   1900	   5424	   1530	interrupts.elf
-Finished building: default.size.stdout
- 
-17:27:19 **** Clean-only build of configuration Debug for project interrupts ****
+rm -rf ./Src/FastBitEmbedded_Implementation.cyclo ./Src/FastBitEmbedded_Implementation.d ./Src/FastBitEmbedded_Implementation.o ./Src/FastBitEmbedded_Implementation.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Scheduler_RoundRobin/Src/Scheduler_SysTick.cyclo ./Scheduler_RoundRobin/Src/Scheduler_SysTick.d ./Scheduler_RoundRobin/Src/Scheduler_SysTick.o ./Scheduler_RoundRobin/Src/Scheduler_SysTick.su ./Scheduler_RoundRobin/Src/TaskHandlers.cyclo ./Scheduler_RoundRobin/Src/TaskHandlers.d ./Scheduler_RoundRobin/Src/TaskHandlers.o ./Scheduler_RoundRobin/Src/TaskHandlers.su ./Scheduler_RoundRobin/Src/TaskStackConfig.cyclo ./Scheduler_RoundRobin/Src/TaskStackConfig.d ./Scheduler_RoundRobin/Src/TaskStackConfig.o ./Scheduler_RoundRobin/Src/TaskStackConfig.su
+rm -rf default.size.stdout taskScheduler.elf taskScheduler.list taskScheduler.map
+ 
+01:03:45 **** Clean-only build of configuration Debug for project taskScheduler ****
 make -j9 clean 
 rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
-rm -rf ./Src/pend_int_USART3.cyclo ./Src/pend_int_USART3.d ./Src/pend_int_USART3.o ./Src/pend_int_USART3.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf default.size.stdout interrupts.elf interrupts.list interrupts.map
+rm -rf ./Src/FastBitEmbedded_Implementation.cyclo ./Src/FastBitEmbedded_Implementation.d ./Src/FastBitEmbedded_Implementation.o ./Src/FastBitEmbedded_Implementation.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Scheduler_RoundRobin/Src/Scheduler_SysTick.cyclo ./Scheduler_RoundRobin/Src/Scheduler_SysTick.d ./Scheduler_RoundRobin/Src/Scheduler_SysTick.o ./Scheduler_RoundRobin/Src/Scheduler_SysTick.su ./Scheduler_RoundRobin/Src/TaskHandlers.cyclo ./Scheduler_RoundRobin/Src/TaskHandlers.d ./Scheduler_RoundRobin/Src/TaskHandlers.o ./Scheduler_RoundRobin/Src/TaskHandlers.su ./Scheduler_RoundRobin/Src/TaskStackConfig.cyclo ./Scheduler_RoundRobin/Src/TaskStackConfig.d ./Scheduler_RoundRobin/Src/TaskStackConfig.o ./Scheduler_RoundRobin/Src/TaskStackConfig.su
+rm -rf default.size.stdout taskScheduler.elf taskScheduler.list taskScheduler.map
  
-17:27:20 **** Incremental Build of configuration Debug for project interrupts ****
+01:03:45 **** Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: ./Startup/startup_stm32f407vgtx.o: in function `LoopFillZerobss':
-/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/Debug/../Startup/startup_stm32f407vgtx.s:97: undefined reference to `main'
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/FastBitEmbedded_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/FastBitEmbedded_Implementation.d" -MT"Src/FastBitEmbedded_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/FastBitEmbedded_Implementation.o"
+arm-none-eabi-gcc "../Src/UniOfLeeds_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/UniOfLeeds_Implementation.d" -MT"Src/UniOfLeeds_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/UniOfLeeds_Implementation.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/Scheduler_SysTick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/Scheduler_SysTick.d" -MT"Scheduler_RoundRobin/Src/Scheduler_SysTick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskHandlers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskHandlers.d" -MT"Scheduler_RoundRobin/Src/TaskHandlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskHandlers.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskStackConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskStackConfig.d" -MT"Scheduler_RoundRobin/Src/TaskStackConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskStackConfig.o"
+arm-none-eabi-gcc -o "taskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="taskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: ./Src/UniOfLeeds_Implementation.o: in function `main':
+/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Debug/../Src/UniOfLeeds_Implementation.c:10: multiple definition of `main'; ./Src/FastBitEmbedded_Implementation.o:/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Debug/../Src/FastBitEmbedded_Implementation.c:11: first defined here
 collect2: error: ld returned 1 exit status
-make: *** [makefile:63: interrupts.elf] Error 1
+make: *** [makefile:64: taskScheduler.elf] Error 1
 "make -j9 all" terminated with exit code 2. Build might be incomplete.
-17:28:03 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
+01:04:05 **** Clean-only build of configuration Debug for project taskScheduler ****
+make -j9 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/FastBitEmbedded_Implementation.cyclo ./Src/FastBitEmbedded_Implementation.d ./Src/FastBitEmbedded_Implementation.o ./Src/FastBitEmbedded_Implementation.su ./Src/UniOfLeeds_Implementation.cyclo ./Src/UniOfLeeds_Implementation.d ./Src/UniOfLeeds_Implementation.o ./Src/UniOfLeeds_Implementation.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Scheduler_RoundRobin/Src/Scheduler_SysTick.cyclo ./Scheduler_RoundRobin/Src/Scheduler_SysTick.d ./Scheduler_RoundRobin/Src/Scheduler_SysTick.o ./Scheduler_RoundRobin/Src/Scheduler_SysTick.su ./Scheduler_RoundRobin/Src/TaskHandlers.cyclo ./Scheduler_RoundRobin/Src/TaskHandlers.d ./Scheduler_RoundRobin/Src/TaskHandlers.o ./Scheduler_RoundRobin/Src/TaskHandlers.su ./Scheduler_RoundRobin/Src/TaskStackConfig.cyclo ./Scheduler_RoundRobin/Src/TaskStackConfig.d ./Scheduler_RoundRobin/Src/TaskStackConfig.o ./Scheduler_RoundRobin/Src/TaskStackConfig.su
+rm -rf default.size.stdout taskScheduler.elf taskScheduler.list taskScheduler.map
  
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
+01:04:05 **** Incremental Build of configuration Debug for project taskScheduler ****
+make -j9 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/FastBitEmbedded_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/FastBitEmbedded_Implementation.d" -MT"Src/FastBitEmbedded_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/FastBitEmbedded_Implementation.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/Scheduler_SysTick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/Scheduler_SysTick.d" -MT"Scheduler_RoundRobin/Src/Scheduler_SysTick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskHandlers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskHandlers.d" -MT"Scheduler_RoundRobin/Src/TaskHandlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskHandlers.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskStackConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskStackConfig.d" -MT"Scheduler_RoundRobin/Src/TaskStackConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskStackConfig.o"
+arm-none-eabi-gcc -o "taskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="taskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: taskScheduler.elf
+ 
+arm-none-eabi-size  taskScheduler.elf 
+arm-none-eabi-objdump -h -S taskScheduler.elf  > "taskScheduler.list"
    text	   data	    bss	    dec	    hex	filename
-    652	      8	   1568	   2228	    8b4	interrupts.elf
+    644	      8	   1568	   2220	    8ac	taskScheduler.elf
 Finished building: default.size.stdout
  
-Finished building: interrupts.list
+Finished building: taskScheduler.list
  
-17:32:44 **** Incremental Build of configuration Debug for project interrupts ****
+01:07:12 **** Clean-only build of configuration Debug for project taskScheduler ****
+make -j9 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/FastBitEmbedded_Implementation.cyclo ./Src/FastBitEmbedded_Implementation.d ./Src/FastBitEmbedded_Implementation.o ./Src/FastBitEmbedded_Implementation.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Scheduler_RoundRobin/Src/Scheduler_SysTick.cyclo ./Scheduler_RoundRobin/Src/Scheduler_SysTick.d ./Scheduler_RoundRobin/Src/Scheduler_SysTick.o ./Scheduler_RoundRobin/Src/Scheduler_SysTick.su ./Scheduler_RoundRobin/Src/TaskHandlers.cyclo ./Scheduler_RoundRobin/Src/TaskHandlers.d ./Scheduler_RoundRobin/Src/TaskHandlers.o ./Scheduler_RoundRobin/Src/TaskHandlers.su ./Scheduler_RoundRobin/Src/TaskStackConfig.cyclo ./Scheduler_RoundRobin/Src/TaskStackConfig.d ./Scheduler_RoundRobin/Src/TaskStackConfig.o ./Scheduler_RoundRobin/Src/TaskStackConfig.su
+rm -rf default.size.stdout taskScheduler.elf taskScheduler.list taskScheduler.map
+ 
+01:07:12 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/FastBitEmbedded_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/FastBitEmbedded_Implementation.d" -MT"Src/FastBitEmbedded_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/FastBitEmbedded_Implementation.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/Scheduler_SysTick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/Scheduler_SysTick.d" -MT"Scheduler_RoundRobin/Src/Scheduler_SysTick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskHandlers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskHandlers.d" -MT"Scheduler_RoundRobin/Src/TaskHandlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskHandlers.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskStackConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskStackConfig.d" -MT"Scheduler_RoundRobin/Src/TaskStackConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskStackConfig.o"
+arm-none-eabi-gcc -o "taskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="taskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: taskScheduler.elf
  
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
+arm-none-eabi-size  taskScheduler.elf 
+arm-none-eabi-objdump -h -S taskScheduler.elf  > "taskScheduler.list"
    text	   data	    bss	    dec	    hex	filename
-   3436	    100	   1900	   5436	   153c	interrupts.elf
+    644	      8	   1568	   2220	    8ac	taskScheduler.elf
 Finished building: default.size.stdout
  
-Finished building: interrupts.list
+Finished building: taskScheduler.list
  
-17:43:54 **** Incremental Build of configuration Debug for project interrupts ****
+01:07:18 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
+arm-none-eabi-gcc "../Src/FastBitEmbedded_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/FastBitEmbedded_Implementation.d" -MT"Src/FastBitEmbedded_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/FastBitEmbedded_Implementation.o"
+arm-none-eabi-gcc -o "taskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="taskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: taskScheduler.elf
  
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
+arm-none-eabi-size  taskScheduler.elf 
+arm-none-eabi-objdump -h -S taskScheduler.elf  > "taskScheduler.list"
    text	   data	    bss	    dec	    hex	filename
-   3436	    100	   1900	   5436	   153c	interrupts.elf
+    644	      8	   1568	   2220	    8ac	taskScheduler.elf
 Finished building: default.size.stdout
  
-Finished building: interrupts.list
+Finished building: taskScheduler.list
  
-17:56:32 **** Incremental Build of configuration Debug for project interrupts ****
+01:20:25 **** Build of configuration Default for project MEDSWEE-M-004_Code_v1.0 ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+"make all" terminated with exit code 2. Build might be incomplete.
+11:58:28 **** Clean-only build of configuration Debug for project taskScheduler ****
+make -j9 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/FastBitEmbedded_Implementation.cyclo ./Src/FastBitEmbedded_Implementation.d ./Src/FastBitEmbedded_Implementation.o ./Src/FastBitEmbedded_Implementation.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Scheduler_RoundRobin/Src/Scheduler_SysTick.cyclo ./Scheduler_RoundRobin/Src/Scheduler_SysTick.d ./Scheduler_RoundRobin/Src/Scheduler_SysTick.o ./Scheduler_RoundRobin/Src/Scheduler_SysTick.su ./Scheduler_RoundRobin/Src/TaskHandlers.cyclo ./Scheduler_RoundRobin/Src/TaskHandlers.d ./Scheduler_RoundRobin/Src/TaskHandlers.o ./Scheduler_RoundRobin/Src/TaskHandlers.su ./Scheduler_RoundRobin/Src/TaskStackConfig.cyclo ./Scheduler_RoundRobin/Src/TaskStackConfig.d ./Scheduler_RoundRobin/Src/TaskStackConfig.o ./Scheduler_RoundRobin/Src/TaskStackConfig.su
+rm -rf default.size.stdout taskScheduler.elf taskScheduler.list taskScheduler.map
+ 
+11:58:29 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/UniOfLeeds_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/UniOfLeeds_Implementation.d" -MT"Src/UniOfLeeds_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/UniOfLeeds_Implementation.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/Scheduler_SysTick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/Scheduler_SysTick.d" -MT"Scheduler_RoundRobin/Src/Scheduler_SysTick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskHandlers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskHandlers.d" -MT"Scheduler_RoundRobin/Src/TaskHandlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskHandlers.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskStackConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskStackConfig.d" -MT"Scheduler_RoundRobin/Src/TaskStackConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskStackConfig.o"
+../Src/UniOfLeeds_Implementation.c: In function 'main':
+../Src/UniOfLeeds_Implementation.c:36:24: warning: unused variable 'functionHolder' [-Wunused-variable]
+   36 |         TaskFunction_t functionHolder[4] = {Task_1, Task_2, Task_3, Task_4};
+      |                        ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "taskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="taskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: taskScheduler.elf
  
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
+arm-none-eabi-size  taskScheduler.elf 
+arm-none-eabi-objdump -h -S taskScheduler.elf  > "taskScheduler.list"
+Finished building: taskScheduler.list
+ 
    text	   data	    bss	    dec	    hex	filename
-   3436	    100	   1900	   5436	   153c	interrupts.elf
+    732	     24	   1568	   2324	    914	taskScheduler.elf
 Finished building: default.size.stdout
  
-Finished building: interrupts.list
+12:01:18 **** Clean-only build of configuration Debug for project taskScheduler ****
+make -j9 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/UniOfLeeds_Implementation.cyclo ./Src/UniOfLeeds_Implementation.d ./Src/UniOfLeeds_Implementation.o ./Src/UniOfLeeds_Implementation.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Scheduler_RoundRobin/Src/Scheduler_SysTick.cyclo ./Scheduler_RoundRobin/Src/Scheduler_SysTick.d ./Scheduler_RoundRobin/Src/Scheduler_SysTick.o ./Scheduler_RoundRobin/Src/Scheduler_SysTick.su ./Scheduler_RoundRobin/Src/TaskHandlers.cyclo ./Scheduler_RoundRobin/Src/TaskHandlers.d ./Scheduler_RoundRobin/Src/TaskHandlers.o ./Scheduler_RoundRobin/Src/TaskHandlers.su ./Scheduler_RoundRobin/Src/TaskStackConfig.cyclo ./Scheduler_RoundRobin/Src/TaskStackConfig.d ./Scheduler_RoundRobin/Src/TaskStackConfig.o ./Scheduler_RoundRobin/Src/TaskStackConfig.su
+rm -rf default.size.stdout taskScheduler.elf taskScheduler.list taskScheduler.map
  
-21:24:45 **** Incremental Build of configuration Debug for project interrupts ****
+12:01:18 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-../Src/priorityConfig.c: In function 'config_IRQ_priority':
-../Src/priorityConfig.c:32:29: error: 'POS' undeclared (first use in this function)
-   32 |         *pIPRx &= ~(0xFF << POS);                       // Clear the 8-bits in the IPR.
-      |                             ^~~
-../Src/priorityConfig.c:32:29: note: each undeclared identifier is reported only once for each function it appears in
-../Src/priorityConfig.c:28:17: warning: unused variable 'POS_IPRx' [-Wunused-variable]
-   28 |         uint8_t POS_IPRx = (IRQ_NO % 4) * 8;
-      |                 ^~~~~~~~
-make: *** [Src/subdir.mk:25: Src/priorityConfig.o] Error 1
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/FastBitEmbedded_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/FastBitEmbedded_Implementation.d" -MT"Src/FastBitEmbedded_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/FastBitEmbedded_Implementation.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/Scheduler_SysTick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/Scheduler_SysTick.d" -MT"Scheduler_RoundRobin/Src/Scheduler_SysTick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskHandlers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskHandlers.d" -MT"Scheduler_RoundRobin/Src/TaskHandlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskHandlers.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskStackConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskStackConfig.d" -MT"Scheduler_RoundRobin/Src/TaskStackConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskStackConfig.o"
+../Src/FastBitEmbedded_Implementation.c:49:5: error: redefinition of 'main'
+   49 | int main(void)
+      |     ^~~~
+../Src/FastBitEmbedded_Implementation.c:12:5: note: previous definition of 'main' with type 'int(void)'
+   12 | int main(void){
+      |     ^~~~
+make: *** [Src/subdir.mk:25: Src/FastBitEmbedded_Implementation.o] Error 1
+make: *** Waiting for unfinished jobs....
 "make -j9 all" terminated with exit code 2. Build might be incomplete.
-21:25:01 **** Incremental Build of configuration Debug for project interrupts ****
+12:01:34 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
+arm-none-eabi-gcc "../Src/FastBitEmbedded_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/FastBitEmbedded_Implementation.d" -MT"Src/FastBitEmbedded_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/FastBitEmbedded_Implementation.o"
+arm-none-eabi-gcc -o "taskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="taskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: taskScheduler.elf
  
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
+arm-none-eabi-size  taskScheduler.elf 
+arm-none-eabi-objdump -h -S taskScheduler.elf  > "taskScheduler.list"
    text	   data	    bss	    dec	    hex	filename
-   3436	    100	   1900	   5436	   153c	interrupts.elf
+   3528	    100	   1900	   5528	   1598	taskScheduler.elf
 Finished building: default.size.stdout
  
-Finished building: interrupts.list
+Finished building: taskScheduler.list
  
-21:28:49 **** Incremental Build of configuration Debug for project interrupts ****
+12:02:32 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
+arm-none-eabi-gcc "../Src/FastBitEmbedded_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/FastBitEmbedded_Implementation.d" -MT"Src/FastBitEmbedded_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/FastBitEmbedded_Implementation.o"
+arm-none-eabi-gcc -o "taskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="taskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: taskScheduler.elf
  
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
+arm-none-eabi-size  taskScheduler.elf 
+arm-none-eabi-objdump -h -S taskScheduler.elf  > "taskScheduler.list"
    text	   data	    bss	    dec	    hex	filename
-   3548	    104	   1904	   5556	   15b4	interrupts.elf
+   3528	    100	   1900	   5528	   1598	taskScheduler.elf
 Finished building: default.size.stdout
  
-Finished building: interrupts.list
+Finished building: taskScheduler.list
  
-21:35:38 **** Incremental Build of configuration Debug for project interrupts ****
+12:04:40 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3604	    112	   1904	   5620	   15f4	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-21:39:53 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3620	    112	   1904	   5636	   1604	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-21:39:58 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3620	    112	   1904	   5636	   1604	interrupts.elf
-Finished building: default.size.stdout
- 
-21:45:53 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3620	    112	   1904	   5636	   1604	interrupts.elf
-Finished building: default.size.stdout
- 
-21:48:05 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3620	    112	   1904	   5636	   1604	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-21:48:09 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3620	    112	   1904	   5636	   1604	interrupts.elf
-Finished building: default.size.stdout
- 
-21:50:08 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
-arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupts.elf
- 
-arm-none-eabi-size  interrupts.elf 
-arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
-   text	   data	    bss	    dec	    hex	filename
-   3620	    112	   1904	   5636	   1604	interrupts.elf
-Finished building: default.size.stdout
- 
-Finished building: interrupts.list
- 
-21:50:15 **** Incremental Build of configuration Debug for project interrupts ****
-make -j9 all 
-arm-none-eabi-size  interrupts.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3620	    112	   1904	   5636	   1604	interrupts.elf
-Finished building: default.size.stdout
- 
-20:35:01 **** Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-20:35:14 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-20:50:16 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-../Src/main.c: In function 'Task1_Handler':
-../Src/main.c:44:17: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-   44 |                 printf("Task 1 \n");
-      |                 ^~~~~~
-../Src/main.c:20:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-   19 | #include <stdint.h>
+arm-none-eabi-gcc "../Src/FastBitEmbedded_Implementation.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/FastBitEmbedded_Implementation.d" -MT"Src/FastBitEmbedded_Implementation.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/FastBitEmbedded_Implementation.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/Scheduler_SysTick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/Scheduler_SysTick.d" -MT"Scheduler_RoundRobin/Src/Scheduler_SysTick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskHandlers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskHandlers.d" -MT"Scheduler_RoundRobin/Src/TaskHandlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskHandlers.o"
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c: In function 'SysTick_Handler':
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:12:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   12 |         printf("SysTick Handler \n");
+      |         ^~~~~~
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:1:1: note: include '<stdio.h>' or provide a declaration of 'printf'
   +++ |+#include <stdio.h>
-   20 | 
-../Src/main.c:44:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-   44 |                 printf("Task 1 \n");
+    1 | /*
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:12:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   12 |         printf("SysTick Handler \n");
+      |         ^~~~~~
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:12:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Scheduler_RoundRobin/Src/TaskHandlers.c: In function 'Task1_Handler':
+../Scheduler_RoundRobin/Src/TaskHandlers.c:13:17: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |                 printf("Task 1 \n");
       |                 ^~~~~~
-../Src/main.c:44:17: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Src/main.c: In function 'Task2_Handler':
-../Src/main.c:50:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-   50 |                 printf("Task 2 \n");
+../Scheduler_RoundRobin/Src/TaskHandlers.c:1:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Scheduler_RoundRobin/Src/TaskHandlers.c:13:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |                 printf("Task 1 \n");
       |                 ^~~~~~
-../Src/main.c:50:17: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Src/main.c: In function 'Task3_Handler':
-../Src/main.c:56:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-   56 |                 printf("Task 3 \n");
+../Scheduler_RoundRobin/Src/TaskHandlers.c:13:17: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c: At top level:
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:17:19: error: unknown type name 'uint32_t'
+   17 | void sysTick_init(uint32_t TickHz){
+      |                   ^~~~~~~~
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:1:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /*
+../Scheduler_RoundRobin/Src/TaskHandlers.c: In function 'Task2_Handler':
+../Scheduler_RoundRobin/Src/TaskHandlers.c:19:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   19 |                 printf("Task 2 \n");
       |                 ^~~~~~
-../Src/main.c:56:17: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Src/main.c: In function 'Task4_Handler':
-../Src/main.c:62:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-   62 |                 printf("Task 4 \n");
+../Scheduler_RoundRobin/Src/TaskHandlers.c:19:17: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Scheduler_RoundRobin/Src/TaskHandlers.c: In function 'Task3_Handler':
+../Scheduler_RoundRobin/Src/TaskHandlers.c:25:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   25 |                 printf("Task 3 \n");
       |                 ^~~~~~
-../Src/main.c:62:17: note: include '<stdio.h>' or provide a declaration of 'printf'
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-20:50:35 **** Incremental Build of configuration Debug for project TaskScheduler ****
+../Scheduler_RoundRobin/Src/TaskHandlers.c:25:17: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Scheduler_RoundRobin/Src/TaskHandlers.c: In function 'Task4_Handler':
+../Scheduler_RoundRobin/Src/TaskHandlers.c:31:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   31 |                 printf("Task 4 \n");
+      |                 ^~~~~~
+../Scheduler_RoundRobin/Src/TaskHandlers.c:31:17: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [Scheduler_RoundRobin/Src/subdir.mk:25: Scheduler_RoundRobin/Src/Scheduler_SysTick.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+12:05:08 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-20:52:21 **** Incremental Build of configuration Debug for project TaskScheduler ****
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/Scheduler_SysTick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/Scheduler_SysTick.d" -MT"Scheduler_RoundRobin/Src/Scheduler_SysTick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/TaskHandlers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/TaskHandlers.d" -MT"Scheduler_RoundRobin/Src/TaskHandlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/TaskHandlers.o"
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c: In function 'SysTick_Handler':
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:12:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   12 |         printf("SysTick Handler \n");
+      |         ^~~~~~
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:1:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:12:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   12 |         printf("SysTick Handler \n");
+      |         ^~~~~~
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:12:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c: At top level:
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:17:19: error: unknown type name 'uint32_t'
+   17 | void sysTick_init(uint32_t TickHz){
+      |                   ^~~~~~~~
+../Scheduler_RoundRobin/Src/Scheduler_SysTick.c:1:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /*
+make: *** [Scheduler_RoundRobin/Src/subdir.mk:25: Scheduler_RoundRobin/Src/Scheduler_SysTick.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+12:05:32 **** Incremental Build of configuration Debug for project taskScheduler ****
 make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
+arm-none-eabi-gcc "../Scheduler_RoundRobin/Src/Scheduler_SysTick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/Scheduler_RoundRobin/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Scheduler_RoundRobin/Src/Scheduler_SysTick.d" -MT"Scheduler_RoundRobin/Src/Scheduler_SysTick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Scheduler_RoundRobin/Src/Scheduler_SysTick.o"
+arm-none-eabi-gcc -o "taskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/taskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="taskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: taskScheduler.elf
  
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
+arm-none-eabi-size  taskScheduler.elf 
+arm-none-eabi-objdump -h -S taskScheduler.elf  > "taskScheduler.list"
    text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	TaskScheduler.elf
+   3496	    100	   1900	   5496	   1578	taskScheduler.elf
 Finished building: default.size.stdout
  
-Finished building: TaskScheduler.list
- 
-20:58:05 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-21:03:27 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-23:44:01 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    668	      8	   1568	   2244	    8c4	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-23:45:46 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/Implementation_fastBit.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Implementation_fastBit.d" -MT"Src/Implementation_fastBit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Implementation_fastBit.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    668	      8	   1568	   2244	    8c4	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-23:47:31 **** Clean-only build of configuration Debug for project TaskScheduler ****
-make -j9 clean 
-rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
-rm -rf ./Src/Implementation_fastBit.cyclo ./Src/Implementation_fastBit.d ./Src/Implementation_fastBit.o ./Src/Implementation_fastBit.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf TaskScheduler.elf TaskScheduler.list TaskScheduler.map default.size.stdout
- 
-23:47:32 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/Implementation_UniOfLeeds.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Implementation_UniOfLeeds.d" -MT"Src/Implementation_UniOfLeeds.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Implementation_UniOfLeeds.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    644	      8	   1568	   2220	    8ac	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-23:47:53 **** Clean-only build of configuration Debug for project TaskScheduler ****
-make -j9 clean 
-rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
-rm -rf ./Src/Implementation_UniOfLeeds.cyclo ./Src/Implementation_UniOfLeeds.d ./Src/Implementation_UniOfLeeds.o ./Src/Implementation_UniOfLeeds.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf TaskScheduler.elf TaskScheduler.list TaskScheduler.map default.size.stdout
- 
-23:47:54 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
-arm-none-eabi-gcc "../Src/Implementation_fastBit.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Implementation_fastBit.d" -MT"Src/Implementation_fastBit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Implementation_fastBit.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    668	      8	   1568	   2244	    8c4	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-00:21:45 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/Implementation_fastBit.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Implementation_fastBit.d" -MT"Src/Implementation_fastBit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Implementation_fastBit.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    752	      8	   1568	   2328	    918	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-00:22:07 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-size  TaskScheduler.elf 
-   text	   data	    bss	    dec	    hex	filename
-    752	      8	   1568	   2328	    918	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-00:24:50 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/Implementation_fastBit.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Implementation_fastBit.d" -MT"Src/Implementation_fastBit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Implementation_fastBit.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-    764	      8	   1568	   2340	    924	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-00:24:56 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-size  TaskScheduler.elf 
-   text	   data	    bss	    dec	    hex	filename
-    764	      8	   1568	   2340	    924	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-00:25:27 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-gcc "../Src/Implementation_fastBit.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Implementation_fastBit.d" -MT"Src/Implementation_fastBit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Implementation_fastBit.o"
-arm-none-eabi-gcc -o "TaskScheduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/TaskScheduler/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TaskScheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TaskScheduler.elf
- 
-arm-none-eabi-size  TaskScheduler.elf 
-arm-none-eabi-objdump -h -S TaskScheduler.elf  > "TaskScheduler.list"
-   text	   data	    bss	    dec	    hex	filename
-   3528	    100	   1900	   5528	   1598	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-Finished building: TaskScheduler.list
- 
-00:25:30 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-size  TaskScheduler.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3528	    100	   1900	   5528	   1598	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-20:56:48 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-size  TaskScheduler.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3528	    100	   1900	   5528	   1598	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-20:59:33 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-size  TaskScheduler.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3528	    100	   1900	   5528	   1598	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-21:12:49 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-size  TaskScheduler.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3528	    100	   1900	   5528	   1598	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-20:32:12 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-size  TaskScheduler.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3528	    100	   1900	   5528	   1598	TaskScheduler.elf
-Finished building: default.size.stdout
- 
-20:38:13 **** Incremental Build of configuration Debug for project TaskScheduler ****
-make -j9 all 
-arm-none-eabi-size  TaskScheduler.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3528	    100	   1900	   5528	   1598	TaskScheduler.elf
-Finished building: default.size.stdout
+Finished building: taskScheduler.list
  

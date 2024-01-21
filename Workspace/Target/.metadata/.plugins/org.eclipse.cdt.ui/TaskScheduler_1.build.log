@@ -1,0 +1,10 @@
+00:42:54 **** Clean-only build of configuration Debug for project TaskScheduler_1 ****
+make clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/Implementation_UniOfLeeds.cyclo ./Src/Implementation_UniOfLeeds.d ./Src/Implementation_UniOfLeeds.o ./Src/Implementation_UniOfLeeds.su ./Src/Implementation_fastBit.cyclo ./Src/Implementation_fastBit.d ./Src/Implementation_fastBit.o ./Src/Implementation_fastBit.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Scheduler_RoundRobin/src/sysTickScheduler.cyclo ./Scheduler_RoundRobin/src/sysTickScheduler.d ./Scheduler_RoundRobin/src/sysTickScheduler.o ./Scheduler_RoundRobin/src/sysTickScheduler.su ./Scheduler_RoundRobin/src/taskHandlers.cyclo ./Scheduler_RoundRobin/src/taskHandlers.d ./Scheduler_RoundRobin/src/taskHandlers.o ./Scheduler_RoundRobin/src/taskHandlers.su ./Scheduler_RoundRobin/src/taskStackConfig.cyclo ./Scheduler_RoundRobin/src/taskStackConfig.d ./Scheduler_RoundRobin/src/taskStackConfig.o ./Scheduler_RoundRobin/src/taskStackConfig.su
+rm -rf TaskScheduler.elf TaskScheduler.list TaskScheduler.map default.size.stdout
+ 
+
+00:42:55 Build Finished. 0 errors, 0 warnings. (took 162ms)
+

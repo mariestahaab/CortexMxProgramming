@@ -275,3 +275,56 @@ Finished building: default.size.stdout
  
 Finished building: taskScheduler.list
  
+20:05:34 **** Clean-only build of configuration Debug for project interrupts ****
+make -j9 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/priorityConfig.cyclo ./Src/priorityConfig.d ./Src/priorityConfig.o ./Src/priorityConfig.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf default.size.stdout interrupts.elf interrupts.list interrupts.map
+ 
+20:05:34 **** Build of configuration Debug for project interrupts ****
+make -j9 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/priorityConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/priorityConfig.d" -MT"Src/priorityConfig.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/priorityConfig.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: interrupts.elf
+ 
+arm-none-eabi-size  interrupts.elf 
+arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
+   text	   data	    bss	    dec	    hex	filename
+   3620	    112	   1904	   5636	   1604	interrupts.elf
+Finished building: default.size.stdout
+ 
+Finished building: interrupts.list
+ 
+20:07:13 **** Clean-only build of configuration Debug for project interrupts ****
+make -j9 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/priorityConfig.cyclo ./Src/priorityConfig.d ./Src/priorityConfig.o ./Src/priorityConfig.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf default.size.stdout interrupts.elf interrupts.list interrupts.map
+ 
+20:07:13 **** Incremental Build of configuration Debug for project interrupts ****
+make -j9 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/pend_int_USART3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pend_int_USART3.d" -MT"Src/pend_int_USART3.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/pend_int_USART3.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/mariestahaab/Documents/GitHub/CortexMxProgramming/Workspace/Target/interrupts/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: interrupts.elf
+ 
+arm-none-eabi-size  interrupts.elf 
+arm-none-eabi-objdump -h -S interrupts.elf  > "interrupts.list"
+   text	   data	    bss	    dec	    hex	filename
+   3424	    100	   1900	   5424	   1530	interrupts.elf
+Finished building: default.size.stdout
+ 
+Finished building: interrupts.list
+ 
+20:07:17 **** Incremental Build of configuration Debug for project interrupts ****
+make -j9 all 
+arm-none-eabi-size  interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3424	    100	   1900	   5424	   1530	interrupts.elf
+Finished building: default.size.stdout
+ 

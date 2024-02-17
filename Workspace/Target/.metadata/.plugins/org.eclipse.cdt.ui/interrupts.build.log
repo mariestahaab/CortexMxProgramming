@@ -1,10 +1,10 @@
-21:50:15 **** Incremental Build of configuration Debug for project interrupts ****
+20:07:17 **** Incremental Build of configuration Debug for project interrupts ****
 make -j9 all 
 arm-none-eabi-size  interrupts.elf 
    text	   data	    bss	    dec	    hex	filename
-   3620	    112	   1904	   5636	   1604	interrupts.elf
+   3424	    100	   1900	   5424	   1530	interrupts.elf
 Finished building: default.size.stdout
  
 
-21:50:15 Build Finished. 0 errors, 0 warnings. (took 165ms)
+20:07:17 Build Finished. 0 errors, 0 warnings. (took 180ms)
 

@@ -1,4 +1,4 @@
-"./Src/priorityConfig.o"
+"./Src/pend_int_USART3.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"
 "./Startup/startup_stm32f407vgtx.o"
